@@ -13,7 +13,7 @@ namespace SSLDemo.Controllers
         /// <summary>
         /// This method must use JSONP in order to communicate from http to https. JSONP requires GET (does not support POST), so we must leave both protocols available on this method.
         /// </summary>
-        [RequireHttpsByConfig, JsonpFilter, HttpPost]
+        [RequireHttpsByConfig, JsonpFilter]
         public JsonResult Haunt(HauntTarget hauntTarget)
         {
             string status = "";
