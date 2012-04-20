@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "The Graveyard";
+}
+
+<div>
+    @Html.ActionLink("The Graveyard (HTTP)", "index") | <a href="#" onclick="$('#hauntDialog').dialog('open');">Haunt</a> | @Html.ActionLink("Exorcise (HTTP)", "exorcise", "graveyard")
+</div>
+
+<hr />
+
+<h1>HTTP</h1>
+
+<h2>The Graveyard</h2>
+
+<p>Greetings, @User.Identity.Name</p>
+<p>It's time for a haunting!</p>
+
+<div id="graveyardStatus" style="color: #cc7812"></div>
+
+@Html.Partial("HauntDialog")
