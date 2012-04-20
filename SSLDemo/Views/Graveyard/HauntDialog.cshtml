@@ -1,9 +1,10 @@
 ﻿@using SSLDemo.Types
+@using SSLDemo.Helpers
 
 @model HauntTarget
 
 <div id="hauntDialog" title="Preparing to Haunt (HTTPS)" style="display: none;">
-@using (Html.BeginForm("haunt", "ghost", FormMethod.Post, new { id = "hauntForm" }))
+@using (Html.BeginForm("haunt", "ghost", FormMethod.Post, new { id = "hauntForm", action = Html.GetHttpOrHttps() + Request.Url.Authority + "/ghost/haunt?callback=?" }))
 {
    <div id="status" style="color: #ff0000;">&nbsp;</div>
    <div>
