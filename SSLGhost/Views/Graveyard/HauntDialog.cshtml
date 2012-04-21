@@ -1,0 +1,30 @@
+﻿@using SSLGhost.Types
+@using SSLGhost.Helpers
+
+@model HauntTarget
+
+<div id="hauntDialog" title="Preparing to Haunt (HTTPS)" style="display: none;">
+@using (Html.BeginForm("haunt", "ghost", FormMethod.Post, new { id = "hauntForm", action = Html.GetHttpOrHttps() + Request.Url.Authority + "/ghost/haunt?callback=?" }))
+{
+   <div id="status" style="color: #ff0000;">&nbsp;</div>
+   <div>
+        <div style="float: left; width: 190px;">
+            @Html.LabelFor(e => e.HumanName, "Human Target Name:")
+        </div>
+        <div style="float: left;">
+            @Html.EditorFor(e => e.HumanName)
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    
+    <div>
+        <div style="float: left; width: 190px;">
+            @Html.LabelFor(e => e.DaysToHaunt, "Length of Haunting in Days:")
+        </div>
+        <div style="float: left;">
+            @Html.EditorFor(e => e.DaysToHaunt)
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+}
+</div>
