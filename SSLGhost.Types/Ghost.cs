@@ -13,7 +13,5 @@ namespace SSLGhost.Types
 
         [Required, DataType(DataType.Password)]
         public string SkeletonKey { get; set; }
-
-        public string Status { get; set; }
     }
 }
