@@ -13,7 +13,7 @@ The example also includes a RequireHttpsByConfig attribute for enabling/disablin
 Read the full tutorial at http://www.primaryobjects.com/CMS/Article140.aspx
 
 ---
-Copyright © 2011 Kory Becker (http://www.primaryobjects.com)
+Copyright © 2014 Kory Becker (http://www.primaryobjects.com)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
